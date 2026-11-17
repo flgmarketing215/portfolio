@@ -21,4 +21,11 @@ Não há build, dependência ou pasta de assets. Abre offline com duplo clique.
 para quem tem o link, mas não aparece no Google. Para tornar pública nas buscas,
 apague o `robots.txt` e a linha `<meta name="robots" ...>` do `index.html`.
 
+---
+
+## BTNC · Bitencourt Studio
+
+A pasta [`btnc/`](btnc/) traz o portfólio do estúdio: `btnc/index.html` e as imagens em `btnc/img/`.
+Com o GitHub Pages ligado, a página fica em `https://<seu-usuario>.github.io/<nome-do-repo>/btnc/`.
+
 **Contato:** gustavobitencourtmacedo@gmail.com · +55 11 97383-1668

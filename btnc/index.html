@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>BTNC Portfólio</title>
+<meta name="description" content="BTNC · Bitencourt Studio: marca, redes sociais, sites e comunicação. Trabalhos para o Grupo FLG, FLG Sports, Andrey Xavier e negócios locais.">
+<meta name="robots" content="noindex, nofollow">
+<meta property="og:type" content="website">
+<meta property="og:title" content="BTNC · Bitencourt Studio — Portfólio">
+<meta property="og:description" content="Marketing que mostra a conta. Marca, redes sociais, sites e comunicação.">
+<meta property="og:image" content="https://flgmarketing215.github.io/portfolio/btnc/img/og.jpg">
+<meta property="og:url" content="https://flgmarketing215.github.io/portfolio/btnc/">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,400;12..96,600;12..96,800&family=IBM+Plex+Mono:wght@400;500&family=IBM+Plex+Sans:wght@400;500;600&display=swap">
+<style>
+/* BTNC · Portfólio. Um mundo visual só (oliva, areia, mostarda), sem tema escuro alternativo.
+   Layout: coluna editorial com faixas de largura total; grades de cartões 1 > 2 > 3 colunas. */
+:root{
+  color-scheme: light;
+  --areia:#F1EDE2;
+  --painel:#E7E2D5;
+  --oliva:#2F3626;
+  --oliva-2:#414A35;
+  --salvia:#656E58;
+  --fio:#D8D3C4;
+  --ambar:#8A5E12;
+  --mostarda:#E0A83C;
+  --display:"Bricolage Grotesque", "Arial Narrow", Arial, sans-serif;
+  --corpo:"IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
+  --mono:"IBM Plex Mono", ui-monospace, Menlo, monospace;
+}
+*{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%}
+body{margin:0;background:var(--areia);color:var(--oliva);font-family:var(--corpo);font-size:17px;line-height:1.6;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+a:focus-visible{outline:2px solid var(--mostarda);outline-offset:3px}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+@media (min-width:720px){.wrap{padding:0 40px}}
+
+.rot{font-family:var(--mono);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--salvia);margin:0 0 18px;display:flex;gap:12px;align-items:center}
+.rot b{color:var(--ambar);font-weight:500}
+.rot::after{content:"";flex:1;height:1px;background:var(--fio)}
+h1,h2,h3{font-family:var(--display);text-wrap:balance;margin:0}
+h1{font-weight:800;font-size:clamp(2.6rem,8vw,4.6rem);line-height:.98;letter-spacing:-.035em}
+h2{font-weight:800;font-size:clamp(1.8rem,5vw,2.75rem);line-height:1.04;letter-spacing:-.03em;margin-bottom:16px;max-width:22ch}
+h3{font-weight:600;font-size:1.22rem;letter-spacing:-.015em;line-height:1.2}
+p{margin:0 0 14px;max-width:66ch;color:var(--oliva-2)}
+strong{font-weight:600;color:var(--oliva)}
+section{padding:64px 0}
+@media (min-width:720px){section{padding:88px 0}}
+
+/* topo */
+.topo{background:var(--oliva);color:var(--areia)}
+.topo .wrap{padding-top:28px;padding-bottom:60px}
+@media (min-width:720px){.topo .wrap{padding-top:40px;padding-bottom:88px}}
+.barra{display:flex;justify-content:space-between;align-items:center;gap:16px;margin-bottom:64px}
+.barra svg{width:112px;height:auto;display:block}
+.barra span{font-family:var(--mono);font-size:.7rem;letter-spacing:.16em;text-transform:uppercase;color:#9CA68C;text-align:right}
+.topo h1{max-width:13ch;margin-bottom:22px}
+.topo .lede{font-size:1.2rem;line-height:1.45;color:var(--areia);max-width:46ch;margin-bottom:30px}
+.acoes{display:flex;flex-wrap:wrap;gap:12px}
+.btn{display:inline-block;font-family:var(--mono);font-size:.78rem;letter-spacing:.12em;text-transform:uppercase;text-decoration:none;padding:14px 18px;border:1px solid #56603F;color:var(--areia)}
+.btn.cheio{background:var(--mostarda);border-color:var(--mostarda);color:var(--oliva);font-weight:500}
+.btn:hover{border-color:var(--mostarda)}
+
+/* frentes */
+.grade{display:grid;gap:1px;background:var(--fio);border:1px solid var(--fio);grid-template-columns:1fr}
+@media (min-width:640px){.grade{grid-template-columns:repeat(2,1fr)}}
+@media (min-width:960px){.grade.tres{grid-template-columns:repeat(3,1fr)}}
+.cel{background:var(--areia);padding:24px 22px}
+.cel .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ambar);display:block;margin-bottom:10px}
+.cel h3{margin-bottom:8px}
+.cel p{font-size:.95rem;line-height:1.55;margin:0;color:var(--salvia)}
+.cel ul{margin:10px 0 0;padding-left:18px;color:var(--oliva-2);font-size:.95rem;line-height:1.5}
+.cel li{margin-bottom:4px}
+.cel .tags{margin-top:16px;padding-top:12px;border-top:1px solid var(--fio);font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--oliva)}
+
+/* casos com imagem */
+.caso{border:1px solid var(--fio);background:var(--areia);margin-top:28px}
+.caso figure{margin:0}
+.caso img{display:block;width:100%;height:auto;background:var(--oliva)}
+.caso figcaption{font-family:var(--mono);font-size:.66rem;letter-spacing:.12em;text-transform:uppercase;color:var(--salvia);padding:10px 22px;border-bottom:1px solid var(--fio)}
+.caso .txt{padding:24px 22px}
+.caso .txt .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ambar);display:block;margin-bottom:10px}
+.caso .txt h3{font-size:1.5rem;font-weight:800;letter-spacing:-.025em;margin-bottom:10px}
+.caso .txt p{font-size:.98rem;margin:0 0 10px}
+.caso .txt ul{margin:8px 0 0;padding-left:18px;color:var(--oliva-2);font-size:.95rem;line-height:1.5}
+.caso .txt li{margin-bottom:4px}
+.caso .tags{margin-top:16px;padding-top:12px;border-top:1px solid var(--fio);font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--oliva)}
+.painel .caso{background:var(--painel)}
+
+/* galerias */
+.gal,.tira{margin-top:14px}
+.gal{display:grid;gap:14px;grid-template-columns:1fr}
+@media (min-width:720px){.gal.dois{grid-template-columns:1fr 1fr}}
+.gal figure,.tira figure,.heroi figure{margin:0;border:1px solid var(--fio);background:var(--areia)}
+.gal img,.tira img,.heroi img{display:block;width:100%;height:auto}
+.gal figcaption,.tira figcaption,.heroi figcaption{font-family:var(--mono);font-size:.64rem;letter-spacing:.12em;text-transform:uppercase;color:var(--salvia);padding:10px 14px;border-top:1px solid var(--fio)}
+.tira{display:grid;gap:14px;grid-auto-flow:column;grid-auto-columns:74%;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;padding-bottom:6px}
+.tira figure{scroll-snap-align:start}
+@media (min-width:720px){.tira{grid-auto-flow:row;grid-template-columns:repeat(3,1fr);overflow:visible;padding-bottom:0}.tira.par{grid-template-columns:1fr 1fr}}
+.heroi{display:grid;gap:14px;grid-template-columns:1fr;margin-top:28px}
+@media (min-width:900px){.heroi{grid-template-columns:5fr 7fr;align-items:start}}
+.lado{display:grid;gap:14px}
+.lado .txt{border:1px solid var(--fio);padding:24px 22px}
+.lado .txt .k{font-family:var(--mono);font-size:.68rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ambar);display:block;margin-bottom:10px}
+.lado .txt ul{margin:0;padding-left:18px;color:var(--oliva-2);font-size:.98rem;line-height:1.5}
+.lado .txt li{margin-bottom:5px}
+.lado .tags{margin-top:16px;padding-top:12px;border-top:1px solid var(--fio);font-family:var(--mono);font-size:.66rem;letter-spacing:.13em;text-transform:uppercase;color:var(--oliva)}
+.painel .gal,.painel .tira{margin-top:14px}
+.painel .gal.dois{margin-top:28px}
+.exame{display:grid;gap:14px;grid-template-columns:1fr;margin-bottom:8px}
+@media (min-width:960px){.exame{grid-template-columns:3fr 2fr;align-items:stretch}}
+.imp .tira{margin-top:0;align-items:start}
+.imp .tira figure{border-color:#3C452F;background:#0b0b0b}
+.imp .tira figcaption{color:#9CA68C;border-top-color:#3C452F;background:var(--oliva)}
+
+/* faixa mostarda */
+.faixa{background:var(--mostarda);color:var(--oliva)}
+.faixa .rot{color:#6E5410}.faixa .rot b{color:var(--oliva)}.faixa .rot::after{background:#C08F2C}
+.faixa blockquote{margin:0 0 20px;font-family:var(--display);font-weight:800;font-size:clamp(2.2rem,7vw,3.6rem);line-height:1;letter-spacing:-.035em;max-width:14ch}
+.faixa p{color:#4A3A0E;font-size:1.08rem;max-width:58ch}
+.faixa strong{color:var(--oliva)}
+
+/* painel FLG */
+.painel{background:var(--painel)}
+.painel .cel{background:var(--painel)}
+
+/* imprensa */
+.imp{background:var(--oliva);color:var(--areia)}
+.imp .rot{color:#9CA68C}.imp .rot b{color:var(--mostarda)}.imp .rot::after{background:#3C452F}
+.imp p{color:#C6CBBB}.imp strong{color:var(--areia)}
+.papel{border-left:3px solid var(--mostarda);padding:4px 0 4px 18px;margin:0 0 34px;max-width:64ch}
+.papel p{margin:0 0 8px;font-size:1.02rem}
+.papel p:last-child{margin:0}
+.materia{display:flex;flex-direction:column;justify-content:center;text-decoration:none;background:var(--areia);color:var(--oliva);padding:30px 26px}
+.materia .v{font-family:var(--mono);font-size:.7rem;letter-spacing:.15em;text-transform:uppercase;color:var(--ambar);display:block;margin-bottom:10px}
+.materia h3{font-size:clamp(1.3rem,4vw,1.9rem);font-weight:800;letter-spacing:-.025em;line-height:1.1;margin-bottom:10px;max-width:26ch}
+.materia p{color:var(--oliva-2);margin:0 0 12px;font-size:.98rem}
+.materia .ir{font-family:var(--mono);font-size:.72rem;letter-spacing:.12em;text-transform:uppercase;color:var(--ambar)}
+.materia:hover .ir{text-decoration:underline}
+.lista{list-style:none;margin:28px 0 0;padding:0;border-top:1px solid #3C452F}
+.lista li{border-bottom:1px solid #3C452F}
+.lista a{display:grid;grid-template-columns:1fr;gap:4px;padding:16px 0;text-decoration:none;color:var(--areia)}
+@media (min-width:720px){.lista a{grid-template-columns:190px 1fr;gap:24px;align-items:baseline}}
+.lista .v{font-family:var(--mono);font-size:.68rem;letter-spacing:.14em;text-transform:uppercase;color:var(--mostarda)}
+.lista .t{font-size:1rem;line-height:1.4}
+.lista a:hover .t{text-decoration:underline}
+
+/* método */
+.passos{border-top:1px solid var(--fio);margin-top:8px}
+.passo{display:grid;grid-template-columns:44px 1fr;gap:0 16px;padding:16px 0;border-bottom:1px solid var(--fio);align-items:baseline}
+.passo .n{font-family:var(--mono);font-size:.78rem;color:var(--ambar);letter-spacing:.1em}
+.passo p{margin:0}
+
+/* contato */
+.fim{background:var(--oliva);color:var(--areia)}
+.fim h2{max-width:16ch}
+.fim p{color:#C6CBBB}
+.contatos{display:grid;gap:1px;background:#3C452F;border:1px solid #3C452F;margin-top:28px;grid-template-columns:1fr}
+@media (min-width:720px){.contatos{grid-template-columns:repeat(3,1fr)}}
+.contatos a{background:var(--oliva);padding:22px 20px;text-decoration:none;display:block}
+.contatos .k{font-family:var(--mono);font-size:.66rem;letter-spacing:.15em;text-transform:uppercase;color:var(--mostarda);display:block;margin-bottom:8px}
+.contatos .val{font-size:1rem;color:var(--areia);overflow-wrap:anywhere}
+.contatos a:hover .val{text-decoration:underline}
+.rodape{font-family:var(--mono);font-size:.66rem;letter-spacing:.14em;text-transform:uppercase;color:#7C8570;margin-top:40px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap}
+</style>
+</head>
+<body>
+
+<header class="topo">
+  <div class="wrap">
+    <div class="barra">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0.00 -132.00 541.20 171.60" role="img" aria-label="BTNC">
+        <path fill="currentColor" transform="translate(0.00,0.00) scale(0.200000,-0.200000)" d="M69 0V660H354Q416 660 465.5 649.5Q515 639 550.0 617.5Q585 596 603.5 562.5Q622 529 622 483Q622 444 605.5 415.0Q589 386 554.0 368.0Q519 350 461 344V327Q557 321 603.0 281.0Q649 241 649 173Q649 115 618.0 77.0Q587 39 527.0 19.5Q467 0 379 0ZM223 128H373Q434 128 463.0 145.5Q492 163 492 201Q492 243 457.0 264.0Q422 285 350 285H223ZM223 383H328Q399 383 432.0 402.5Q465 422 465 461Q465 499 434.5 516.5Q404 534 342 534H223Z"/>
+        <path fill="currentColor" transform="translate(134.40,0.00) scale(0.200000,-0.200000)" d="M208 0V660H370V0ZM16 526V660H564V526Z"/>
+        <path fill="currentColor" transform="translate(246.20,0.00) scale(0.200000,-0.200000)" d="M69 0V660H278L561 217H573L563 660H720V0H531L228 468H217L226 0Z"/>
+        <path fill="#E0A83C" transform="translate(404.20,39.60) scale(0.200000,-0.200000)" d="M379 -14Q301 -14 239.0 7.0Q177 28 133.5 71.0Q90 114 67.5 176.5Q45 239 45 323Q45 409 68.0 474.0Q91 539 134.5 584.0Q178 629 237.0 651.5Q296 674 368 674Q425 674 472.5 660.0Q520 646 555.0 618.5Q590 591 609.5 552.5Q629 514 630 465L481 424Q481 465 463.5 491.0Q446 517 419.5 530.5Q393 544 362 544Q337 544 310.5 533.5Q284 523 262.0 498.5Q240 474 227.0 434.0Q214 394 214 334Q214 256 236.0 208.0Q258 160 297.0 137.5Q336 115 383 115Q435 115 463.5 137.5Q492 160 504.0 194.0Q516 228 517 263L657 241Q656 187 641.0 140.0Q626 93 593.5 58.5Q561 24 508.0 5.0Q455 -14 379 -14Z"/>
+      </svg>
+      <span>Portfólio · Novembro 2026</span>
+    </div>
+    <h1>Marketing que mostra a conta.</h1>
+    <p class="lede">BTNC · Bitencourt Studio é o estúdio de marketing de Gustavo Bitencourt, em São Paulo. Marca, redes sociais, sites e comunicação para negócios que já têm produto bom e precisam de quem prove isso.</p>
+    <div class="acoes">
+      <a class="btn cheio" href="https://wa.me/5511973831668">Falar no WhatsApp</a>
+      <a class="btn" href="#flg">Ver os trabalhos</a>
+    </div>
+  </div>
+</header>
+
+<section id="frentes">
+  <div class="wrap">
+    <p class="rot"><b>01</b> O que o estúdio faz</p>
+    <h2>Seis frentes, um responsável só.</h2>
+    <p>Eu faço o desenho e a redação. O miolo da entrega não é terceirizado.</p>
+    <div class="grade tres" style="margin-top:28px">
+      <div class="cel"><span class="k">Frente 01</span><h3>Redes sociais com design incluso</h3><p>Calendário editorial, direção de arte, estáticos, carrosséis e reels dentro de um sistema visual, com agendamento.</p></div>
+      <div class="cel"><span class="k">Frente 02</span><h3>Marca e sistema visual</h3><p>Logo, paleta com contraste verificado, tipografia, grade e manual. O cliente sai com brandbook, não com um logo solto.</p></div>
+      <div class="cel"><span class="k">Frente 03</span><h3>Sites e páginas</h3><p>Site institucional, página de agendamento e loja online, pensados primeiro para o celular.</p></div>
+      <div class="cel"><span class="k">Frente 04</span><h3>Conteúdo em vídeo</h3><p>Roteiro de gravação, reels de antes e depois, stories de campanha e linguagem de motion para a marca.</p></div>
+      <div class="cel"><span class="k">Frente 05</span><h3>Comunicação institucional e imprensa</h3><p>Texto para investidor, para jornalista e para o feed. Apoio a assessoria, newsletter e conteúdo de executivos.</p></div>
+      <div class="cel"><span class="k">Frente 06</span><h3>Atendimento e tráfego</h3><p>WhatsApp Business estruturado, mensagens automáticas de atendimento e campanhas de tráfego pago.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="faixa">
+  <div class="wrap">
+    <p class="rot"><b>02</b> Posicionamento</p>
+    <blockquote>A prova antes da peça.</blockquote>
+    <p>Quase todo estúdio vende quantidade de post. Eu vendo o passo anterior: descobrir o que está travando a conversão, mostrar a evidência e só então produzir. <strong>Peça sem diagnóstico é decoração cara.</strong></p>
+  </div>
+</section>
+
+<section class="painel" id="flg">
+  <div class="wrap">
+    <p class="rot"><b>03</b> Grupo FLG</p>
+    <h2>Marketing e comunicação de uma holding com quatro marcas.</h2>
+    <p>Respondo pelo marketing e pela comunicação do Grupo FLG, holding de real assets e capital com as marcas FLG Corp, FLG Realty, FLG Capital e FLG Sports. É onde opero marca institucional para três públicos ao mesmo tempo: investidor, imprensa e feed.</p>
+
+    <div class="gal dois">
+      <figure>
+        <img src="img/flg-brandbook-capa.webp" width="1300" height="731" loading="lazy" alt="Capa do manual de marca da FLG Corp, com o logo sobre fundo preto e uma fotografia em preto e branco">
+        <figcaption>Manual de marca · FLG Corp</figcaption>
+      </figure>
+      <figure>
+        <img src="img/flg-arquitetura.webp" width="1300" height="731" loading="lazy" alt="Página de arquitetura de marca: FLG Group no topo e as quatro marcas FLG Corp, FLG Realty, FLG Capital e FLG Sports abaixo">
+        <figcaption>Arquitetura das quatro marcas</figcaption>
+      </figure>
+    </div>
+
+    <div class="tira">
+      <figure>
+        <img src="img/flg-carrossel-1.webp" width="760" height="950" loading="lazy" alt="Capa de carrossel da FLG Corp com o título Antes do terreno, o fluxo, sobre foto aérea de um porto">
+        <figcaption>Carrossel de mercado · capa</figcaption>
+      </figure>
+      <figure>
+        <img src="img/flg-carrossel-2.webp" width="760" height="950" loading="lazy" alt="Card do carrossel com a frase A tese deveria justificar o ativo">
+        <figcaption>Carrossel de mercado · tese</figcaption>
+      </figure>
+      <figure>
+        <img src="img/flg-carrossel-3.webp" width="760" height="950" loading="lazy" alt="Card do carrossel com a lista A ineficiência não some, migra">
+        <figcaption>Carrossel de mercado · argumento</figcaption>
+      </figure>
+    </div>
+
+    <div class="grade tres" style="margin-top:28px">
+      <div class="cel"><span class="k">Marca</span><h3>Arquitetura das quatro marcas</h3><p>Brandbooks com paleta, tipografia, uso de logo e regras de aplicação para cada marca do grupo.</p></div>
+      <div class="cel"><span class="k">Redes sociais</span><h3>LinkedIn e Instagram do grupo</h3><p>Cards e carrosséis de mercado para os perfis da FLG Corp, com copy diferente para cada plataforma.</p></div>
+      <div class="cel"><span class="k">Newsletter</span><h3>Carta FLG</h3><p>Newsletter mensal institucional sobre mercado, real assets e logística, do texto ao envio.</p></div>
+      <div class="cel"><span class="k">Conteúdo</span><h3>LinkedIn de executivos</h3><p>Posts, artigos e carrosséis para os perfis dos executivos, dentro das restrições de um grupo com fundos listados.</p></div>
+      <div class="cel"><span class="k">Gestão</span><h3>Sistema da comunicação</h3><p>Calendário, fluxo de aprovação e organização do acervo de marca, para a operação não depender de memória.</p></div>
+      <div class="cel"><span class="k">Diagnóstico</span><h3>Presença digital e plano de 90 dias</h3><p>Auditoria dos canais do grupo e plano de ação por prioridade.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="andrey">
+  <div class="wrap">
+    <p class="rot"><b>04</b> FLG Sports · Andrey Xavier</p>
+    <h2>Uma marca de esporte e a temporada de um golfista.</h2>
+    <p>Construí a marca da vertical esportiva do grupo e cuido da comunicação do golfista Andrey Xavier, do Tour Profissional da CBGolfe: anúncio de torneio, resultado de cada rodada e o card do título.</p>
+
+    <div class="heroi">
+      <figure class="alto">
+        <img src="img/andrey-destaques.jpg" width="1288" height="1717" loading="lazy" alt="Capa do carrossel Destaques do Mês no Golfe, de julho de 2026, com Andrey Xavier em campo e os logos FLG Sports e bttNG Apura">
+        <figcaption>Destaques do Mês · julho de 2026</figcaption>
+      </figure>
+      <div class="lado">
+        <figure>
+          <img src="img/flgsports-brandbook.jpg" width="1456" height="762" loading="lazy" alt="Abertura do brand book da FLG Sports, com o lema O jogo continua fora do campo e um retrato em preto e branco de Andrey Xavier">
+          <figcaption>Brand book da FLG Sports</figcaption>
+        </figure>
+        <div class="txt">
+          <span class="k">O que eu entrego</span>
+          <ul>
+            <li>Brand book: diagnóstico, direções criativas e sistema de marca</li>
+            <li>Sistema de cor por modalidade: golfe, inverno, polo, pôquer e tênis</li>
+            <li>Cobertura dos torneios no Instagram da FLG Sports</li>
+            <li>Carrossel do título no 14º Abierto de Termas de Río Hondo</li>
+            <li>Site da vertical</li>
+          </ul>
+          <div class="tags">Marca · Redes sociais · Atleta</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="tira">
+      <figure>
+        <img src="img/andrey-campo-grande.webp" width="880" height="1100" loading="lazy" alt="Card de anúncio do torneio em Campo Grande, de 25 a 29 de agosto, com retrato de Andrey Xavier">
+        <figcaption>Anúncio do torneio</figcaption>
+      </figure>
+      <figure>
+        <img src="img/andrey-rodada.webp" width="880" height="1100" loading="lazy" alt="Card de resultado da primeira rodada do Terras Brasil Invitational: 71 tacadas e quinto lugar">
+        <figcaption>Resultado da rodada</figcaption>
+      </figure>
+      <figure>
+        <img src="img/andrey-campeao.webp" width="880" height="1100" loading="lazy" alt="Card de campeão do Terras Brasil Invitational: Andrey Xavier em primeiro lugar com 212 golpes, quatro abaixo do par">
+        <figcaption>Card do título</figcaption>
+      </figure>
+    </div>
+
+    <div class="gal dois">
+      <figure>
+        <img src="img/flg-sports-modalidades.webp" width="1300" height="731" loading="lazy" alt="Página do manual da FLG Sports com o sistema de modalidades: uma cor e um ícone para golfe, inverno, polo, pôquer e tênis">
+        <figcaption>Sistema de modalidades</figcaption>
+      </figure>
+      <figure>
+        <img src="img/flg-sports-aplicacoes.webp" width="1300" height="731" loading="lazy" alt="Página de aplicações da marca FLG Sports em garrafa térmica, bola de golfe e uniforme">
+        <figcaption>Aplicações da marca</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="imp" id="imprensa">
+  <div class="wrap">
+    <p class="rot"><b>05</b> Imprensa</p>
+    <h2>A FLG na Exame, e o que eu fiz na pauta.</h2>
+    <div class="papel">
+      <p><strong>Meu papel é de bastidor.</strong> Participo do trabalho de comunicação que leva a FLG à imprensa: levantamento de dados, preparação das respostas dos porta-vozes e repercussão nos canais do grupo.</p>
+      <p>Não assino as reportagens e não sou porta-voz. Os textos são dos veículos e dos jornalistas.</p>
+    </div>
+
+    <div class="exame">
+      <div class="tira par">
+        <figure>
+          <img src="img/exame-sandra.jpg" width="694" height="868" loading="lazy" alt="Card de LinkedIn FLG na Exame com retrato e fala de Sandra Ralston, diretora de investimentos da FLG, e a chamada da reportagem">
+          <figcaption>Card de repercussão · LinkedIn</figcaption>
+        </figure>
+        <figure>
+          <img src="img/exame-renato.jpg" width="694" height="868" loading="lazy" alt="Card de LinkedIn FLG na Exame com retrato e fala de Renato Silva, de novos negócios da FLG, e a chamada da reportagem">
+          <figcaption>Card de repercussão · LinkedIn</figcaption>
+        </figure>
+      </div>
+      <a class="materia" href="https://exame.com/mercado-imobiliario/galpoes-portuarios-alugados-por-40-anos-rendem-ate-11-e-atraem-r-1-bi-de-fundo/">
+        <span class="v">Exame · Mercado Imobiliário · 12 nov 2026</span>
+        <h3>Galpões portuários alugados por 40 anos rendem até 11% e atraem R$ 1 bi de fundo</h3>
+        <p>Reportagem sobre os projetos da FLG Corp no entorno do Porto Itapoá, em Santa Catarina.</p>
+        <p>Na repercussão, produzi os cards dos porta-vozes para o LinkedIn do grupo.</p>
+        <span class="ir">Ler na Exame</span>
+      </a>
+    </div>
+
+    <ul class="lista">
+      <li><a href="https://logweb.com.br/flg-corp-investe-r-1-bilhao-em-projetos-de-operacoes-alfandegadas-e-retroportuarias/"><span class="v">Logweb · out 2026</span><span class="t">FLG Corp investe R$ 1 bilhão em projetos de operações alfandegadas e retroportuárias</span></a></li>
+      <li><a href="https://mundologistica.com.br/noticias/flg-pipeline-logistico-projetos-retroportuarios-sul"><span class="v">MundoLogística · abr 2026</span><span class="t">FLG amplia pipeline logístico e concentra expansão em projetos retroportuários no Sul</span></a></li>
+    </ul>
+  </div>
+</section>
+
+<section id="trabalhos">
+  <div class="wrap">
+    <p class="rot"><b>06</b> Trabalhos do estúdio</p>
+    <h2>O que a BTNC já construiu.</h2>
+    <p>Negócios locais e marcas em lançamento. Em cada um está descrito o que foi entregue, sem número que eu não possa comprovar.</p>
+    <div class="caso">
+      <figure>
+        <img src="img/maria-carrossel.jpg" width="1416" height="421" loading="lazy" alt="Quatro peças para o Instagram do salão: capa do antes e depois, foto do antes, foto do depois e chamada da promoção de hidratação">
+        <figcaption>Carrossel de antes e depois e chamada de promoção · Instagram</figcaption>
+      </figure>
+      <div class="txt">
+        <span class="k">Salão de beleza · Vila Andrade, São Paulo</span>
+        <h3>Maria Araújo Concept Beauty</h3>
+        <ul>
+          <li>Identidade visual: brandbook e vetorização do logo</li>
+          <li>Campanhas promocionais para Instagram</li>
+          <li>Posts de antes e depois e stories de promoção</li>
+          <li>Catálogo de produtos com QR code e reserva pelo WhatsApp</li>
+          <li>Flyer de contratação e roteiros de gravação</li>
+        </ul>
+        <div class="tags">Marca · Redes sociais · Conteúdo</div>
+      </div>
+    </div>
+
+    <div class="grade" style="margin-top:28px">
+      <div class="cel">
+        <span class="k">Marca de café</span>
+        <h3>Café Romeo</h3>
+        <ul>
+          <li>Diagnóstico, arquitetura e plano da presença digital</li>
+          <li>Projeto de site com vitrine, kits e carrinho</li>
+          <li>Linguagem de motion graphics para a marca</li>
+        </ul>
+        <div class="tags">Site · Motion · Diagnóstico</div>
+      </div>
+      <div class="cel">
+        <span class="k">Plataforma de agendamento para beleza e cuidado pessoal</span>
+        <h3>Bvector</h3>
+        <ul>
+          <li>Redesenho da marca a partir da identidade anterior</li>
+          <li>Logo com as variações de cor</li>
+          <li>Brandbook completo</li>
+          <li>Mockups de aplicação</li>
+        </ul>
+        <div class="tags">Marca · Sistema visual</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="metodo">
+  <div class="wrap">
+    <p class="rot"><b>07</b> Como eu trabalho</p>
+    <h2>Fato, hipótese e recomendação são coisas diferentes.</h2>
+    <p>Não prometo número. Prometo método e cadência, e escrevo onde o dado não existe.</p>
+    <div class="passos">
+      <div class="passo"><span class="n">01</span><p><strong>Conversa de 30 minutos.</strong> Entender o negócio, o produto e de onde vêm os clientes hoje.</p></div>
+      <div class="passo"><span class="n">02</span><p><strong>Diagnóstico por escrito.</strong> Cada afirmação marcada como fato, hipótese ou recomendação. Fica com o cliente mesmo se ele não fechar.</p></div>
+      <div class="passo"><span class="n">03</span><p><strong>Proposta com escopo, prazo e limites.</strong> O que está incluído e o que não está, antes do primeiro mês.</p></div>
+      <div class="passo"><span class="n">04</span><p><strong>Entrega em cadência.</strong> Calendário aprovado antes de virar arte e relatório mensal com leitura e recomendação.</p></div>
+    </div>
+  </div>
+</section>
+
+<footer class="fim" id="contato">
+  <div class="wrap" style="padding-top:64px;padding-bottom:48px">
+    <h2>Vamos marcar os trinta minutos?</h2>
+    <p>Gustavo Bitencourt · BTNC · Bitencourt Studio · São Paulo</p>
+    <div class="contatos">
+      <a href="https://wa.me/5511973831668"><span class="k">WhatsApp</span><span class="val">+55 11 97383-1668</span></a>
+      <a href="mailto:gustavobitencourtmacedo@gmail.com"><span class="k">E-mail</span><span class="val">gustavobitencourtmacedo@gmail.com</span></a>
+      <a href="https://www.linkedin.com/in/gustavo-bitencourt-8303b9169"><span class="k">LinkedIn</span><span class="val">linkedin.com/in/gustavo-bitencourt-8303b9169</span></a>
+    </div>
+    <div class="rodape"><span>BTNC · Bitencourt Studio</span><span>Portfólio · Nov 2026</span></div>
+  </div>
+</footer>
+
+</body>
+</html>
